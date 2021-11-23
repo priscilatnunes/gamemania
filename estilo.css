@@ -114,3 +114,16 @@ footer a {
 #icones-contatos div {
     display: flex;
 }
+
+@media (max-width:600px) {
+    #noviades img {
+        width: 300px;
+        height: 250px;
+    }
+    header input {
+        width: 250px;
+    }
+    nav {
+        display: none;
+    }
+}
