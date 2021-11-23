@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/icone-gamer.png" type="image/x-icon">
+    <title>Gamemania</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="imagens/novo logo.jpg" width="200" height="150">
+        <label for="buscar">Pesquisar <i class="fas fa-search-location"></i></label>
+        <input type="search" id="buscar"></input>
+        <div id="icones">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-user" onclick="login()"></i>
+            <div id="nome"></div>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Carrinho de compras</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="modal" class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-success">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="Consoles.html">
+                <li>Consoles</li>
+            </a>
+            <a href="Celulares.html">
+                <li>Celulares</li>
+            </a>
+            <a href="Informatica.html">
+                <li>Informatica</li>
+            </a>
+
+        </ul>
+    </nav>
+
+
+
+    <section id="Produtos">
+        <div class="row">
+            <div id="item-Controle" class="item col-md-3">
+                <img src="imagens/controle.jpg" width="220" height="250">
+                <h4>Controle gamer</h4>
+                <p>R$ 200,00</p>
+                <button>Comprar</button>
+                <button id="btn-Controle" onclick="carrinho(this.id)" class="btn-salvar" value="0">Salvar</button>
+            </div>
+
+            <div id="item-CPU" class="item col-md-3">
+                <img src="imagens/CPU.png" width="220" height="250">
+                <h4>CPU</h4>
+                <p>R$ 1.000,00</p>
+                <button>Comprar</button>
+                <button id="btn-CPU" onclick="carrinho(this.id)" class="btn-salvar" value="1">Salvar</button>
+            </div>
+
+            <div id="item-Headset" class="item col-md-3">
+                <img src="imagens/Fone.jpg" width="220" height="250">
+                <h4>Headset</h4>
+                <p>R$ 150,00</p>
+                <button>Comprar</button>
+                <button id="btn-Headset" onclick="carrinho(this.id)" class="btn-salvar" value="2">Salvar</button>
+            </div>
+
+            <div id="item-PCgamer" class="item col-md-3">
+                <img src="imagens/pc-gamer.jpg" width="300" height="250">
+                <h4>PC gamer</h4>
+                <p>R$ 2.500,00</p>
+                <button>Comprar</button>
+                <button id="btn-PCgamer" onclick="carrinho(this.id)" class="btn-salvar" value="3">Salvar</button>
+            </div>
+        </div>
+        <div class="row">
+            <div id="item-Console" class="item col-md-3">
+                <img src="imagens/Consoles/GamerDroid.jpg" width="220" height="250">
+                <h4>Console</h4>
+                <p>R$ 200,00</p>
+                <button>Comprar</button>
+                <button id="btn-Console" onclick="carrinho(this.id)" class="btn-salvar" value="4">Salvar</button>
+            </div>
+
+            <div id="item-kitGame" class="item col-md-3">
+                <img src="imagens/Consoles/kit Game.jpg" width="220" height="250">
+                <h4>kit Game</h4>
+                <p>R$ 1.000,00</p>
+                <button>Comprar</button>
+                <button id="btn-kitGame" onclick="carrinho(this.id)" class="btn-salvar" value="5">Salvar</button>
+            </div>
+
+            <div id="item-Noire" class="item col-md-3">
+                <img src="imagens/Consoles/Noire.jpg" width="220" height="250">
+                <h4>Noire</h4>
+                <p>R$ 150,00</p>
+                <button>Comprar</button>
+                <button id="btn-Noire" onclick="carrinho(this.id)" class="btn-salvar" value="6">Salvar</button>
+            </div>
+
+            <div id="item-PlayStation4" class="item col-md-3">
+                <img src="imagens/Consoles/PlayStation 4.jpg" width="300" height="250">
+                <h4>PlayStation 4</h4>
+                <p>R$ 2.500,00</p>
+                <button>Comprar</button>
+                <button id="btn-PlayStation4" onclick="carrinho(this.id)" class="btn-salvar" value="7">Salvar</button>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <ul>
+            <a href="#">
+                <li>Ajuda e Suporte</li>
+            </a>
+            <a href="#">
+                <li>Fale conosco</li>
+            </a>
+            <a href="#">
+                <li>Garantia, trocas e devoluções</li>
+            </a>
+            <a href="#">
+                <li>Política de privacidade</li>
+            </a>
+
+        </ul>
+        <p><i class="fas fa-map-marker-alt"></i> R: Bela Vista,nº 15- Centro -São Paulo</p>
+        <div id="icones-contatos">
+            <div>
+                <img src="imagens/icone-faleconosco.png" width="30" height="30">
+                <p><a href="#">Fale conosco</a> </p>
+            </div>
+            <div>
+                <img src="imagens/icone-whatsapp.png" width="30" height="30">
+                <p><a href="#">(11)925102352</a> </p>
+            </div>
+            <div>
+                <img src="imagens/icone-email.png" width="30" height="30">
+                <p><a href="#">gamemania@net.com.br</a> </p>
+            </div>
+        </div>
+    </footer>
+    <img src="imagens/image 7.png" width="100%" height="120">
+</body>
+
+</html>
